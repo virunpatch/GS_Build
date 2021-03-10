@@ -1,5 +1,7 @@
 {
-  "name": "GS",
-  "integrations": {},
+  "name": "ToDo",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
