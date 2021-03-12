@@ -1,4 +1,4 @@
-/*import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
@@ -6,15 +6,15 @@ import { Injectable, OnInit } from '@angular/core';
 })
 
 export class crudapi {
-
+    
     constructor(private fs: AngularFirestore) { }
 
     //CRUD
     //read
     readData() {
-        return this.fs.collection('characters').snapshotChanges();
-
+        return this.fs.collection('country').snapshotChanges();
     }
+
     //delete
     delData(docId: any){
         return this.fs.doc('country/'+ docId).delete();
@@ -29,4 +29,4 @@ export class crudapi {
         return this.fs.doc('country/'+docId).update(tmpdoc);
     } 
 
-}*/
+}

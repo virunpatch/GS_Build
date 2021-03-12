@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Build Guide</ion-title>
+    <ion-button slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button shape="round" color="success" expand="full" 
+  (click)="presentPromptADD()">
+    <ion-icon name="add-circle-outline"></ion-icon>&nbsp;&nbsp;ADD</ion-button>
+
+  <ion-list>
+    
+  <ion-item *ngFor="let item of tmpcountrylist" >
+
+    <ion-item-sliding>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="{{item.myflag}}">
+        </ion-thumbnail>
+        <ion-label>{{item.mycountryname}}</ion-label>
+        <ion-label>[ {{item.mycapital}} ] </ion-label>
+        <ion-label>[ {{item.mypop}} ] </ion-label>
+
+    </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="warning" (click)="presentPrompt(item)">
+          <ion-icon name="create-outline"></ion-icon>EDIT
+        </ion-item-option> 
+        <ion-item-option color="danger" (click)="presentConfirm(item)">
+          <ion-icon name="trash-outline"></ion-icon>DEL
+        </ion-item-option>
+      </ion-item-options>
+
+      
+    </ion-item-sliding>
+
+  </ion-item>
+  
+</ion-list>
+</ion-content>
