@@ -16,17 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./add-new-task/add-new-task.module').then( m => m.AddNewTaskPageModule)
   },
   {
-    path: 'overview',
-    loadChildren: () => import('./overview/overview.module').then( m => m.OverviewPageModule)
-  },
-  {
     path: 'ch',
     loadChildren: () => import('./ch/ch.module').then( m => m.ChPageModule)
   },
   {
     path: 'news',
     loadChildren: () => import('./news/news.module').then( m => m.NewsPageModule)
-  },  {
+  },
+  {
     path: 'slideopp1',
     loadChildren: () => import('./slideopp1/slideopp1.module').then( m => m.Slideopp1PageModule)
   },
